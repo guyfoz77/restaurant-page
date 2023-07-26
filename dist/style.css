@@ -2,6 +2,12 @@
     --normalFont: 'Lato', sans-serif;
     --fancyFont: 'Lumanosimo', cursive;
     font-family: var(--normalFont);
+
+    --lightGrey: #DAD7CD;
+    --sage: #A3B18A;
+    --fernGreen: #588157;
+    --darkGreen: #3A5A40;
+    --darkerGreen: #344E41;
 }
 
 * {
