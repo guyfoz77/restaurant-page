@@ -1,7 +1,7 @@
 function buildHeader() {
     const header = document.createElement('header');
     const title = document.createElement('h1');
-    title.textContent = 'This Cool Restaurant';
+    title.textContent = 'Fancy Food.';
     header.appendChild(title);
     return header;
 }
@@ -51,7 +51,6 @@ const buildPage = () => {
     pageArray.forEach(element => {
         mainContainer.appendChild(element);
     });
-    console.log('yes');
 }
 
 export { buildPage };
