@@ -27,7 +27,10 @@ h1 {
     font-size: 2.5em;
 }
 h2 {
-    font-size: 2rem;;
+    font-size: 2rem;
+}
+p {
+    font-size: 1.2rem;
 }
 
 #mainContainer {
@@ -73,11 +76,20 @@ header {
 .info {
     width: 100%;
     display: grid;
+    padding: 10px;
 }
-    .home h2 {
-        align-items: right;
+    .home {
+        gap: 15px;
     }
-
+    .home h2 {
+        text-align: end;
+        width: 100%;
+        border-bottom: solid var(--darkerGreen);
+    }
+    .home >p:last-of-type {
+        text-align: end;
+    }
     .salmon {
         width: 65%;
+        justify-self: right;
     }
