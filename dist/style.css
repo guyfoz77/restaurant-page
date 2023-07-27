@@ -75,6 +75,7 @@ header {
 
 .info {
     width: 100%;
+    max-width: 450px;
     display: grid;
     padding: 10px;
 }
