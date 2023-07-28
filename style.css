@@ -82,7 +82,7 @@ header {
     .home {
         gap: 15px;
     }
-    .home h2 {
+    .info h2 {
         text-align: end;
         width: 100%;
         border-bottom: solid var(--darkerGreen);
@@ -93,4 +93,6 @@ header {
     .salmon {
         width: 65%;
         justify-self: right;
+        border-radius: 5px;
+        border: solid var(--darkerGreen);
     }
