@@ -22,10 +22,12 @@ body {
     min-height: 100vh;
     background-color: var(--darkerGreen);
 }
-h1 {
+/* main title */
+h1 { 
     color: var(--lightGrey);
     font-size: 2.5em;
 }
+/* content titles, starter, main desert titles. */
 h2 {
     font-size: 2rem;
 }
@@ -82,17 +84,42 @@ header {
     .home {
         gap: 15px;
     }
-    .info h2 {
-        text-align: end;
-        width: 100%;
-        border-bottom: solid var(--darkerGreen);
+        .info h2 {
+            text-align: end;
+            width: 100%;
+            border-bottom: solid var(--darkerGreen);
+        }
+        .home >p:last-of-type {
+            text-align: end;
+        }
+        .salmon {
+            width: 65%;
+            justify-self: right;
+            border-radius: 5px;
+            border: solid var(--darkerGreen);
+        }
+    /*  */
+    .menu {
+        gap: 20px;
     }
-    .home >p:last-of-type {
-        text-align: end;
+    .menu>h2:nth-of-type(even){
+        text-align: start;
     }
-    .salmon {
-        width: 65%;
-        justify-self: right;
-        border-radius: 5px;
-        border: solid var(--darkerGreen);
-    }
+        .topRow {
+            display: flex;
+            width: 100%;
+            gap: 5px;
+        }
+            .topRow > h3 {
+                width: fit-content;
+                white-space: nowrap;
+                flex: 0;
+            }
+            .topRow > span {
+                flex: 1;
+                border-bottom: dotted 2px var(--darkerGreen);
+            }
+        .bottomRow {
+            font-style: italic;
+        }
+

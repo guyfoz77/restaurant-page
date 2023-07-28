@@ -28,11 +28,11 @@ function menuItemDivBuilder(item) {
     bottomRow.textContent = item.description;
 
     // build topRow:
-    const itemName = document.createElement('h4');
+    const itemName = document.createElement('h3');
     itemName.classList.add('itemName')
     itemName.textContent = item.name;
     const spacer = document.createElement('span');
-    const price = document.createElement('h4');
+    const price = document.createElement('h3');
     price.classList.add('price');
     price.textContent = item.price;
     topRow.append(itemName, spacer, price);
@@ -46,7 +46,7 @@ export function buildMenu() {
     const menuContent = document.createElement('div');
     menuContent.classList.add('menu', 'info');
 
-    const starterTitle = document.createElement('h3');
+    const starterTitle = document.createElement('h2');
     starterTitle.textContent = 'Starters';
     menuContent.appendChild(starterTitle);
 
@@ -55,7 +55,7 @@ export function buildMenu() {
         menuContent.appendChild(div);
     });
 
-    const mainTitle = document.createElement('h3');
+    const mainTitle = document.createElement('h2');
     mainTitle.textContent = 'Mains'
     menuContent.appendChild(mainTitle);
 
@@ -64,7 +64,7 @@ export function buildMenu() {
         menuContent.appendChild(div);
     });
 
-    const dessertTitle = document.createElement('h3');
+    const dessertTitle = document.createElement('h2');
     dessertTitle.textContent = 'Desserts'
     menuContent.appendChild(dessertTitle);
 
