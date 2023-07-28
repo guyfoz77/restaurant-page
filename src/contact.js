@@ -1,7 +1,9 @@
-export function buildContact() {
-    const contactContent = document.createElement('div');
-    contactContent.classList.add('contact', 'info');
+import { elementBuilder } from "./element-builder";
 
-    const location = document.createElement('h2');
-    location.textContent = 'Location.';    
+
+export function buildContact() {
+    const contactContent = elementBuilder('div', ['contact', 'info'], ''); 
+
+    const location = elementBuilder('h2', '', 'Location.');
+  
 }

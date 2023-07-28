@@ -1,6 +1,6 @@
-export function elementBuilder(element, xclass, textContent) {
-    const element = document.createElement(element);
-    if (xclass != '') element.classList.add(xclass);
-    if (textContent != '') element.textContent = textContent;
-    return element;
+export function elementBuilder(element, classList, textContent) {
+    const xelement = document.createElement(element);
+    if (classList != '') xelement.classList.add(...classList);
+    if (textContent != '') xelement.textContent = textContent;
+    return xelement;
 }
