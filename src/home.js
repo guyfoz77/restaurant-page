@@ -34,6 +34,3 @@ export function buildHome() {
 
     return homeContent;
 }
-
-
-// export { buildHome };

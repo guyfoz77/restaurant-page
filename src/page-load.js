@@ -1,3 +1,9 @@
+function buildContentContainer() {
+    const contentContainer = document.createElement('div');
+    contentContainer.setAttribute('id', 'content');
+    return contentContainer;
+}
+
 function buildHeader() {
     const header = document.createElement('header');
     const title = document.createElement('h1');
@@ -26,12 +32,6 @@ function buildNav() {
         navBar.appendChild(buildButton(button.name, button.cssClass));
     });
     return navBar;
-}
-
-function buildContentContainer() {
-    const contentContainer = document.createElement('div');
-    contentContainer.setAttribute('id', 'content');
-    return contentContainer;
 }
 
 function buildFooter() {
