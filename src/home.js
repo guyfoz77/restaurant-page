@@ -4,20 +4,16 @@ export function buildHome() {
 
     const heading = document.createElement('h2');
     heading.textContent = 'Our food.';
-    homeContent.appendChild(heading);
 
     const foodQuality = document.createElement('p');
     foodQuality.textContent = 'This is some copy about the quality of the food, and from where it is sourced. Literally the best food in the world.';
-    homeContent.appendChild(foodQuality);
 
     const salmonImage = document.createElement('img');
     salmonImage.src = '../src/img/salmon.jpeg';
     salmonImage.classList.add('salmon');
-    homeContent.appendChild(salmonImage);
 
     const aboutResaurant = document.createElement('p');
     aboutResaurant.textContent = 'This is some copy about the restaurant itself. Something about the vibe maybe.';
-    homeContent.appendChild(aboutResaurant);
 
     const openingHours = document.createElement('div');
     const openingHoursPElements = []
@@ -30,7 +26,7 @@ export function buildHome() {
         openingHoursPElements[i].textContent = openingHoursContent[i];
         openingHours.appendChild(openingHoursPElements[i]);
     }
-    homeContent.appendChild(openingHours);
+    homeContent.append(heading, foodQuality, salmonImage, aboutResaurant, openingHours);
 
     return homeContent;
 }
