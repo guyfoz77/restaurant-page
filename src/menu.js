@@ -28,21 +28,50 @@ function menuItemDivBuilder(item) {
     bottomRow.textContent = item.description;
 
     // build topRow:
-    const itemName = document.createElement('h3');
+    const itemName = document.createElement('h4');
     itemName.classList.add('itemName')
     itemName.textContent = item.name;
     const spacer = document.createElement('span');
-    const price = document.createElement('h3');
+    const price = document.createElement('h4');
     price.classList.add('price');
     price.textContent = item.price;
     topRow.append(itemName, spacer, price);
     //
-    
+
     menuItem.append(topRow, bottomRow);
     return menuItem;
 }
 
 export function buildMenu() {
     const menuContent = document.createElement('div');
-    homeContent.classList.add('menu', 'info'); 
+    menuContent.classList.add('menu', 'info');
+
+    const starterTitle = document.createElement('h3');
+    starterTitle.textContent = 'Starters';
+    menuContent.appendChild(starterTitle);
+
+    starters.forEach(starter => {
+        const div = menuItemDivBuilder(starter);
+        menuContent.appendChild(div);
+    });
+
+    const mainTitle = document.createElement('h3');
+    mainTitle.textContent = 'Mains'
+    menuContent.appendChild(mainTitle);
+
+    mains.forEach(main => {
+        const div = menuItemDivBuilder(main);
+        menuContent.appendChild(div);
+    });
+
+    const dessertTitle = document.createElement('h3');
+    dessertTitle.textContent = 'Desserts'
+    menuContent.appendChild(dessertTitle);
+
+    desserts.forEach(dessert => {
+        const div = menuItemDivBuilder(dessert);
+        menuContent.appendChild(div);
+    });
+
+    return menuContent;
 }

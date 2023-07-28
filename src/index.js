@@ -8,4 +8,4 @@ const content = document.querySelector('#content');
 
 // content.appendChild(buildHome());    fills the home tab.
 
-buildMenu()
+content.appendChild(buildMenu());
