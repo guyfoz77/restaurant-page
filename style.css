@@ -63,6 +63,9 @@ header {
         flex: 1 1 33%;
         border: none;
         border-radius: 5px 5px 0 0;
+        background-color: var(--lightGrey);
+    }
+    .active {
         background-color: var(--sage);
     }
 
@@ -132,9 +135,6 @@ header {
     .address {
         display: grid;
         grid-template-columns: 2fr 1fr;
-    }
-    .address p {
-        
     }
     .address img {
         width: 100%
