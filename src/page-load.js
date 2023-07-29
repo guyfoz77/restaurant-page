@@ -35,7 +35,8 @@ function buildNav() {
 }
 
 function buildFooter() {
-    const footer = elementBuilder('footer', '', 'Created by Guy Foster.')
+    const footer = elementBuilder('footer', '', '')
+    footer.innerHTML = '<a href="https://github.com/guyfoz77"><img src="../src/img/github-mark.svg" alt="Github logo">by Guy Foster</a>'
     return footer;
 }
 
