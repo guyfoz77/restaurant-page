@@ -12,4 +12,23 @@ const content = document.querySelector('#content');
 
 // content.appendChild(buildMenu());    fills the menu tab.
 
-content.appendChild(buildContact());
+// content.appendChild(buildContact());     fills the contact tab.
+// content.appendChild(buildHome());
+
+const homeTab = document.querySelector('.home');
+homeTab.addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(buildHome());
+});
+
+const menuTab = document.querySelector('.menu');
+menuTab.addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(buildMenu());
+})
+
+const contactTab = document.querySelector('.contact');
+contactTab.addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(buildContact());
+})
