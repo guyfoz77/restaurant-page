@@ -73,6 +73,7 @@ header {
     background-color: var(--sage);
     min-width: 250px;
     overflow: scroll;
+    border-radius: 0 0 5px 5px;
 }
 
 .nav,
