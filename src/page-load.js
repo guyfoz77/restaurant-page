@@ -1,4 +1,5 @@
 import { elementBuilder } from "./element-builder";
+import gitLogo from './img/github-mark.svg';
 //elementBuilder(element, classList, textContent)
 
 function buildContentContainer() {
@@ -36,7 +37,7 @@ function buildNav() {
 
 function buildFooter() {
     const footer = elementBuilder('footer', '', '')
-    footer.innerHTML = '<a href="https://github.com/guyfoz77"><img src="../src/img/github-mark.svg" alt="Github logo">by Guy Foster</a>'
+    footer.innerHTML = `<a href="https://github.com/guyfoz77"><img src="${gitLogo}" alt="Github logo">by Guy Foster</a>`
     return footer;
 }
 

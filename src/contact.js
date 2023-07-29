@@ -1,4 +1,5 @@
 import { elementBuilder } from "./element-builder";
+import mapImage from './img/map.png';
 
 
 export function buildContact() {
@@ -8,7 +9,7 @@ export function buildContact() {
 
     const addressDiv = elementBuilder('div', 'address', '');
     const map = elementBuilder('img', 'map', '');
-    map.src = '../src/img/map-gb56e65aa0_640.png';
+    map.src = mapImage;
     const address = elementBuilder('p', '', '');
     address.innerHTML = '123 Fake Street<br>Fake Town<br>Fakeshire<br>FA339NN';
     addressDiv.append(address, map);
