@@ -84,6 +84,9 @@ header {
             /* width: 100%; */
             border-bottom: solid var(--darkerGreen);
         }
+        .info>h2:nth-of-type(even){
+            text-align: start;
+        }
         .home >p:last-of-type {
             text-align: end;
         }
@@ -97,9 +100,7 @@ header {
     .menu {
         gap: 20px;
     }
-    .menu>h2:nth-of-type(even){
-        text-align: start;
-    }
+    
         .topRow {
             display: flex;
             gap: 5px;
