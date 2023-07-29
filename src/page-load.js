@@ -1,13 +1,16 @@
+import { elementBuilder } from "./element-builder";
+//elementBuilder(element, classList, textContent)
+
 function buildContentContainer() {
-    const contentContainer = document.createElement('div');
+    const contentContainer = elementBuilder('div', '', '');
     contentContainer.setAttribute('id', 'content');
     return contentContainer;
 }
 
+
 function buildHeader() {
-    const header = document.createElement('header');
-    const title = document.createElement('h1');
-    title.textContent = 'Fancy Food.';
+    const header = elementBuilder('header', '', '');
+    const title = elementBuilder('h1', '', 'Fancy Food.');
     header.appendChild(title);
     return header;
 }
@@ -18,13 +21,10 @@ function buildNav() {
         {name: 'Menu', cssClass: 'menu'},
         {name: 'Contact', cssClass: 'contact'}
     ];
-    const navBar = document.createElement('div');
-    navBar.classList.add('nav');
+    const navBar = elementBuilder('div', 'nav', '');
 
     function buildButton(textContent, cssClass) {
-        const button = document.createElement('button');
-        button.classList.add(cssClass);
-        button.textContent = textContent;
+        const button = elementBuilder('button', cssClass, textContent);
         return button;
     }
 
@@ -35,22 +35,11 @@ function buildNav() {
 }
 
 function buildFooter() {
-    const footer = document.createElement('footer');
-    footer.textContent = 'Created by Guy Foster';
+    const footer = elementBuilder('footer', '', 'Created by Guy Foster.')
     return footer;
 }
 
-const buildPage = () => {
+export function buildPage() {
     const mainContainer = document.querySelector('#mainContainer');
-    const pageArray = 
-    [buildHeader(),
-     buildNav(),
-     buildContentContainer(),
-     buildFooter()
-    ];
-    pageArray.forEach(element => {
-        mainContainer.appendChild(element);
-    });
+    mainContainer.append(buildHeader(), buildNav(), buildContentContainer(), buildFooter());
 }
-
-export { buildPage };

@@ -1,3 +1,6 @@
+import { elementBuilder } from "./element-builder";
+//elementBuilder(element, classList, textContent)
+
 const menuBuilder = (name, price, description) => {
     return {name, price, description};
 }
@@ -17,46 +20,32 @@ const desserts = [
 ]
 
 function menuItemDivBuilder(item) {
-    const menuItem = document.createElement('div');
-    menuItem.classList.add('menuItem');
-
-    const topRow = document.createElement('div');
-    topRow.classList.add('topRow');
-
-    const bottomRow = document.createElement('div');
-    bottomRow.classList.add('bottomRow');
-    bottomRow.textContent = item.description;
-
+    const menuItem = elementBuilder('div', 'menuItem', '');
+    const topRow = elementBuilder('div', 'topRow', '');
+    const bottomRow = elementBuilder('div', 'bottomRow', item.description);
+    
     // build topRow:
-    const itemName = document.createElement('h3');
-    itemName.classList.add('itemName')
-    itemName.textContent = item.name;
+    const itemName = elementBuilder('h3', 'itemName', item.name);
     const spacer = document.createElement('span');
-    const price = document.createElement('h3');
-    price.classList.add('price');
-    price.textContent = item.price;
+    const price = elementBuilder('h3', 'price', item.price);
     topRow.append(itemName, spacer, price);
     //
-
     menuItem.append(topRow, bottomRow);
     return menuItem;
 }
 
 export function buildMenu() {
-    const menuContent = document.createElement('div');
-    menuContent.classList.add('menu', 'info');
+    const menuContent = elementBuilder('div', ['menu', 'info'], '');
+    const starterTitle = elementBuilder('h2', '', 'Starters');
 
-    const starterTitle = document.createElement('h2');
-    starterTitle.textContent = 'Starters';
     menuContent.appendChild(starterTitle);
 
     starters.forEach(starter => {
         const div = menuItemDivBuilder(starter);
         menuContent.appendChild(div);
     });
-
-    const mainTitle = document.createElement('h2');
-    mainTitle.textContent = 'Mains'
+    
+    const mainTitle = elementBuilder('h2', '', 'Mains');
     menuContent.appendChild(mainTitle);
 
     mains.forEach(main => {
@@ -64,8 +53,7 @@ export function buildMenu() {
         menuContent.appendChild(div);
     });
 
-    const dessertTitle = document.createElement('h2');
-    dessertTitle.textContent = 'Desserts'
+    const dessertTitle = elementBuilder('h2', '', 'Desserts');
     menuContent.appendChild(dessertTitle);
 
     desserts.forEach(dessert => {

@@ -1,7 +1,6 @@
 export function elementBuilder(element, classList, textContent) {
     const xelement = document.createElement(element);
     if (classList != '') {
-        console.log(typeof classList);
         if (typeof classList == 'object') {
             classList.forEach(classLabel => {
                 xelement.classList.add(classLabel);
