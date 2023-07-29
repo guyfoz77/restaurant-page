@@ -42,6 +42,7 @@ p {
     min-height: 100vh;
     /* padding: 0 10px 0 10px; */
     grid-template-rows: 100px 50px 1fr 30px;
+    grid-template-columns: 1fr;
     justify-content: center;
 }
 
@@ -53,8 +54,8 @@ header {
 
 .nav {
     display: flex;
-    justify-content: center;
     gap: 5px;
+
 }
     button {
         font-size: 1.2rem;
@@ -67,7 +68,15 @@ header {
 
 #content {
     background-color: var(--sage);
-    min-width: 350px;
+    min-width: 250px;
+    overflow: scroll;
+}
+
+.nav,
+#content {
+    width: 95%;
+    max-width: 450px;
+    justify-self: center;
 }
 
 .info {
@@ -76,17 +85,20 @@ header {
     display: grid;
     padding: 10px;
 }
+
+.info h2 {
+    text-align: end;
+    /* width: 100%; */
+    border-bottom: solid var(--darkerGreen);
+}
+.info>h2:nth-of-type(even){
+    text-align: start;
+}
+
     .home {
         gap: 15px;
     }
-        .info h2 {
-            text-align: end;
-            /* width: 100%; */
-            border-bottom: solid var(--darkerGreen);
-        }
-        .info>h2:nth-of-type(even){
-            text-align: start;
-        }
+        
         .home >p:last-of-type {
             text-align: end;
         }
@@ -116,4 +128,15 @@ header {
         .bottomRow {
             font-style: italic;
         }
+    /*  */
+    .address {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .address p {
+        
+    }
+    .address img {
+        width: 100%
+    }
 
