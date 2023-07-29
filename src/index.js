@@ -12,4 +12,4 @@ const content = document.querySelector('#content');
 
 // content.appendChild(buildMenu());    fills the menu tab.
 
-buildContact();
+content.appendChild(buildContact());
